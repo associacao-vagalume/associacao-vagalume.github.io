@@ -1,19 +1,39 @@
 <footer class="footer">
   <div class="container">
     <h2>Fale com a gente</h2>
-    <a class="email-contact" href="mailto:{{ site.contato.email }}">{{ site.contato.email }}</a>
-    <address>
-      <p class="phone">{{ site.contato.telefone }}</p>
-      <p class="address-1">{{ site.contato.endereco_1 }}</p>
-      <p class="address-2">{{ site.contato.endereco_2 }}</p>
-    </address>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/associacaovagalume/" target="_blank">
-        <img src="/assets/img/facebook.png" alt="Vaga Lume no Facebook">
-      </a>
-      <a href="https://www.instagram.com/_vaga_lume_/" target="_blank">
-        <img src="/assets/img/instagram.png" alt="Vaga Lume no Instagram">
-      </a>
+    <div class="row">
+      <div class="contact-us col-md-4">
+        <form method="POST" action="https://formspree.io/gabrielpedepera@gmail.com">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Digite seu email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="4" placeholder="Deixe sua mensagem para nós"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info col-md-4">
+        <label></label>
+        <address>
+          <p class="phone">{{ site.contato.telefone }}</p>
+          <p class="address-1">{{ site.contato.endereco_1 }}</p>
+          <p class="address-2">{{ site.contato.endereco_2 }}</p>
+        </address>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/associacaovagalume/" target="_blank">
+            <img src="/assets/img/facebook.png" alt="Vaga Lume no Facebook">
+          </a>
+          <a href="https://www.instagram.com/_vaga_lume_/" target="_blank">
+            <img src="/assets/img/instagram.png" alt="Vaga Lume no Instagram">
+          </a>
+        </div>
+      </div>
     </div>
     <a class="top-button" href="#top">Voltar ao Topo &#9650;</a>
   </div>
