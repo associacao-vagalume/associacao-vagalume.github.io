@@ -108,6 +108,10 @@
   :-moz-placeholder           {@content}
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
+  *:focus::-webkit-input-placeholder { color:transparent; }
+  *:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+  *:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+  *:focus:-ms-input-placeholder { color:transparent; }
 }
 
 @include placeholder {
