@@ -13,13 +13,13 @@
             <textarea id="message" name="message" rows="4" placeholder="Deixe sua mensagem para nós"></textarea>
           </div>
           <div class="form-group">
-            <input type="submit" value="Enviar" />
+            <input type="submit" disabled="disabled" value="Enviar" />
           </div>
         </form>
       </div>
 
       <div class="contact-info col-md-4">
-        <label></label>
+        <a class="email-contact" href="mailto:{{ site.contato.email }}">{{ site.contato.email }}</a>
         <address>
           <p class="phone">{{ site.contato.telefone }}</p>
           <p class="address-1">{{ site.contato.endereco_1 }}</p>

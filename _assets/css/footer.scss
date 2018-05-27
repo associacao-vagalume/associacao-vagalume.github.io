@@ -14,8 +14,6 @@
     }
 
     .contact-us {
-      margin-right: 3em;
-
       label {
         color: $umber;
         display: block;
@@ -84,6 +82,14 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .footer {
+    .contact-us {
+      display: none;
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .footer {
     font-size: 1.25rem;
@@ -92,7 +98,15 @@
       text-align: left;
     }
 
-    .top-button {
+    .contact-info {
+      padding-left: 3em;
+    }
+
+    address {
+      margin-top: 1.5rem
+    }
+
+    .top-button, .email-contact {
       display: none;
     }
 
