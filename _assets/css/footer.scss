@@ -41,6 +41,11 @@
         float: right;
         cursor: pointer;
       }
+
+      input[type="submit"]:disabled {
+        opacity:0.5;
+        cursor: not-allowed;
+      }
     }
   }
 
