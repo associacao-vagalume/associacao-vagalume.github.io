@@ -14,6 +14,13 @@
     }
 
     .contact-us {
+      #thankyou_message {
+        display: none;
+        p {
+          margin-top: 1.5rem;
+        }
+      }
+
       label {
         color: $umber;
         display: block;

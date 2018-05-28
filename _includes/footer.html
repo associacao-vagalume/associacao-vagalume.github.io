@@ -3,7 +3,7 @@
     <h2>Fale com a gente</h2>
     <div class="row">
       <div class="contact-us col-md-4">
-        <form method="POST" action="https://formspree.io/gabrielpedepera@gmail.com">
+        <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxtepCGgMK3p1e3KxGDx2pRow2rydS6jNMVGffU4Q/exec">
           <div class="form-group">
             <label for="email">Email</label>
             <input id="email"
@@ -30,6 +30,12 @@
             <input type="submit" disabled=true value="Enviar" />
           </div>
         </form>
+
+        <div id="thankyou_message">
+          <p>
+            Obrigado! Sua mensagem foi enviada com sucesso!
+          </p>
+        </div>
       </div>
 
       <div class="contact-info col-md-4">
@@ -90,6 +96,7 @@
 {% js jquery.slides.min %}
 {% js home %}
 {% js expedicao %}
+{% js form-submission-handler %}
 
 </body>
 </html>
