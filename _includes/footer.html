@@ -3,7 +3,9 @@
     <h2>Fale com a gente</h2>
     <div class="row">
       <div class="contact-us col-md-4">
-        <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxtepCGgMK3p1e3KxGDx2pRow2rydS6jNMVGffU4Q/exec">
+        <form id="gform" method="POST" action="{{ site.contato.formulario_google_app_script }}">
+          <label class="sr-only">Keep this field blank</label>
+          <input id="honeypot" type="text" name="honeypot" value="" />
           <div class="form-group">
             <label for="email">Email</label>
             <input id="email"

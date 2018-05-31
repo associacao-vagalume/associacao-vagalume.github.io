@@ -18,8 +18,8 @@ function getFormData() {
   var form = document.getElementById("gform");
   var elements = form.elements; // all form elements
   var fields = Object.keys(elements).filter(function(k) {
-        // the filtering logic is simple, only keep fields that are not the honeypot
-        return (elements[k].name !== "honeypot");
+    // the filtering logic is simple, only keep fields that are not the honeypot
+    return (elements[k].name !== "honeypot");
   }).map(function(k) {
     if(elements[k].name !== undefined) {
       return elements[k].name;
@@ -66,11 +66,9 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
 
-  /* OPTION: Remove this comment to enable SPAM prevention, see README.md
   if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
     return false;
   }
-  */
 
   if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
     var invalidEmail = document.getElementById("email-invalid");
