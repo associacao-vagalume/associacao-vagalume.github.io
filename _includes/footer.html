@@ -71,30 +71,6 @@
   integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
   crossorigin="anonymous"></script>
 
-<script>
-  $(document).ready(function() {
-    validateInputsRequired();
-    $('.required').on('keyup', validateInputsRequired);
-  });
-
-  function validateInputsRequired() {
-    var inputsWithValues = 0;
-    var inputsRequired = $('.required');
-
-    inputsRequired.each(function() {
-      if ($(this).val()) {
-        inputsWithValues += 1;
-      }
-    });
-
-    if (inputsWithValues == inputsRequired.length) {
-      $('input[type=submit]').prop('disabled', false);
-    } else {
-      $('input[type=submit]').prop('disabled', true);
-    }
-  }
-</script>
-
 {% js jquery.slides.min %}
 {% js home %}
 {% js expedicao %}

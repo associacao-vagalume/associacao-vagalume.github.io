@@ -1,3 +1,24 @@
+$(document).ready(function() {
+  validateInputsRequired();
+  $('.required').on('keyup', validateInputsRequired);
+});
+
+function validateInputsRequired() {
+  var inputsWithValues = 0;
+  var inputsRequired = $('.required');
+
+  inputsRequired.each(function() {
+    if ($(this).val()) {
+      inputsWithValues += 1;
+    }
+  });
+
+  if (inputsWithValues == inputsRequired.length) {
+    $('input[type=submit]').prop('disabled', false);
+  } else {
+    $('input[type=submit]').prop('disabled', true);
+  }
+}
 
 function validEmail(email) { // see:
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -99,10 +120,12 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     xhr.send(encoded);
   }
 }
+
 function loaded() {
   console.log("Contact form submission handler loaded successfully.");
   // bind to the submit event of our form
   var form = document.getElementById("gform");
   form.addEventListener("submit", handleFormSubmit, false);
 };
+
 document.addEventListener("DOMContentLoaded", loaded, false);
