@@ -41,11 +41,11 @@
 
       input[type="submit"] {
         display: block;
-        border:	2px solid white;
+        border:	2px solid $white;
         padding-left: 1.5em;
         padding-right: 1.5em;
         background-color: transparent;
-        color:white;
+        color:$white;
       }
 
       input[type="submit"] {
