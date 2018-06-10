@@ -103,17 +103,6 @@
           opacity:0.5;
           cursor: not-allowed;
         }
-
-        @mixin placeholder {
-          ::-webkit-input-placeholder {@content}
-          :-moz-placeholder           {@content}
-          ::-moz-placeholder          {@content}
-          :-ms-input-placeholder      {@content}
-          *:focus::-webkit-input-placeholder { color:transparent; }
-          *:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-          *:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-          *:focus:-ms-input-placeholder { color:transparent; }
-        }
       }
     }
 
@@ -134,6 +123,17 @@
       order: 3;
     }
   }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+  *:focus::-webkit-input-placeholder { color:transparent; }
+  *:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+  *:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+  *:focus:-ms-input-placeholder { color:transparent; }
 }
 
 @include placeholder {
