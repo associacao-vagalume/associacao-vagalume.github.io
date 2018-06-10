@@ -76,7 +76,6 @@ function getFormData() {
 
   // add form-specific values into the data
   data.formDataNameOrder = JSON.stringify(fields);
-  data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
   data.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
   console.log(data);
